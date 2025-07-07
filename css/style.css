@@ -1,87 +1,160 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
 
-.body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: sans-serif;
-    }
+.barra-superior {
+  background-color: rgb(18, 18, 71);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: #6793be;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.barra-superior-der {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.barra-superior-der a {
+  color: white;
+}
+
+.info-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #e7e7e7;
+  gap: 1rem;
+}
+
+.logot img {
+  height: 70px;
+}
+
+.info-contacto div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-contacto i {
+  font-size: 2.5rem;
+  color: rgb(18, 18, 71);
+}
+
+.info-contacto strong {
+  color: rgb(18, 18, 71);
+  font-size: 0.8rem;
+}
 
 .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
     display: flex;
-    width: 100%; /*hace que la barra de navegacion ocupe en ancho total de la pantalla*/
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* opcional para separación */
+  position: relative;
+  z-index: 10;
+  margin-top: -30px;
+  
 
-  /*  position: fixed; HACE QUE LA NAV ESTE FIJA EN UNA PARTE DE LA PANTALLA Y AUNQUE HAGAMOS SCROLL ELLA SE MUEVE TAMBIEN*/ 
-    top: 100; /*determina la ubicacion desde la parte superior de la pagina*/
-    left: 0;
-    background-color: rgb(18, 18, 71);
-    justify-content: center; /*centra los elementos de la barra respecto a la pantalla*/
-    font-size: 18px;/*tamaño de la tipografia de nav*/
-    font-weight: bold; /*letras en negrita*/
+}
+.submenu:hover {
+    background-color: rgb(182, 176, 238);
+    border-radius: 5px;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
 }
 
-.navbar a{
-    color: rgb(205, 205, 209); /*color de la tipografia*/
+.menu a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
 }
 
-
-.navbar-nav{
-
-    justify-content: center; /* centrado horizontal */
-    gap: 40px; /* espacio entre los elementos */
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: stretch;
-    font-family: Fjalla+One Bold, tahoma, sans-serif;
-    
-    
-}
-.navbar-item{
-    cursor: pointer;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    
-}
-.navbar-item:hover{
+.navbar-item :hover{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
 }
-.portada{
-    width: 100%;
-    margin: 0;
-    top: 0;
-    left: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 400px;
+.btn-presupuesto {
+  background-color: rgb(18, 18, 71);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
+.imagen-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: -45px;
+}
 
+/* Responsive */
 @media (max-width: 768px) {
-   
-
-    .navbar-item{
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        justify-content: flex-start;
-    }
-
-
-
-
+  .info-contacto {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-presupuesto {
+    margin-top: 0.5rem;
+  }
+}
 
    /*LA-EMPRESA*/
 
@@ -135,7 +208,8 @@
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
-  .item {
+  .item.image {
     flex: 1 1 100%;
+     width: 80%;
   }
 }
