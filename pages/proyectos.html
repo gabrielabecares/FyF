@@ -52,18 +52,27 @@
     </div>
   </div>
 
-  <nav class="navbar">
-    <div class="navbar-container">
-      <ul class="menu">
-        <li class="navbar-item"><a href="../index.html">INICIO</a></li>
-        <li class="navbar-item"><a href="/pages/laempresa.html">LA EMPRESA</a></li>
-        <li class="navbar-item"><a href="/pages/servicios.html">SERVICIOS</a></li>
-        <li class="navbar-item"><a href="/pages/proyectos.html">PROYECTOS</a></li>
-        <li class="navbar-item"><a href="/pages/contacto.html">CONTACTO</a></li>
-      </ul>
-      <a href="../pages/contacto.html" class="btn-presupuesto">PRESUPUESTO →</a>
-    </div>
-  </nav>
+ <nav class="navbar">
+  <div class="navbar-container">
+    <!-- Botón hamburguesa solo visible en móvil -->
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menú de navegación -->
+    <ul class="menu" id="menu">
+      <li class="navbar-item"><a href="/index.html">INICIO</a></li>
+      <li class="navbar-item"><a href="/pages/laempresa.html">LA EMPRESA</a></li>
+      <li class="navbar-item"><a href="/pages/servicios.html">SERVICIOS</a></li>
+      <li class="navbar-item"><a href="/pages/proyectos.html">PROYECTOS</a></li>
+      <li class="navbar-item"><a href="/pages/contacto.html">CONTACTO</a></li>
+    </ul>
+
+    <!-- Botón de presupuesto -->
+    <a href="pages/contacto.html" class="btn-presupuesto">PRESUPUESTO →</a>
+  </div>
+</nav>
+
 
   <div class="imagen-header">
     <img src="../img/Imagen-principal1.jpg" alt="Imagen encabezado">

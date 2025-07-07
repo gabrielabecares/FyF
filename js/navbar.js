@@ -37,3 +37,25 @@ prev.addEventListener('click', prevSlide);
 setInterval(nextSlide, 5000);
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".menu a");
+
+const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href").split("/").pop();
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
