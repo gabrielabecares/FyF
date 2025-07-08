@@ -47,15 +47,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".menu a");
 
-const currentPath = window.location.pathname.split("/").pop() || "index.html";
-
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute("href").split("/").pop();
-    if (linkPath === currentPath) {
-      link.classList.add("active");
-    }
-  });
-});
