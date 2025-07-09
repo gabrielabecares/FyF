@@ -110,23 +110,60 @@ body {
 
 }
 @media (max-width: 768px) {
-  .navbar-container {
+  .logot img {
+    height: 55px !important;
+  }
+
+  .info-contacto {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .info-contacto i {
+    font-size: 1.5rem !important;
+  }
+
+  .info-contacto strong {
+    font-size: 0.85rem;
+  }
+
+  .navbar-container {
+      max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
   }
 
   .menu {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    gap: 1rem;
   }
 
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
 
   .btn-presupuesto {
     margin-top: 1rem;
+    align-self: center;
   }
 }
+
 .submenu:hover {
     background-color: rgb(182, 176, 238);
     border-radius: 5px;
@@ -648,7 +685,7 @@ body {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  background-color: #f4f5f7;
+  background-color: rgb(18, 18, 71);
   color: #2b2d54;
   border: none;
   padding: 0.7rem 1rem;
@@ -682,7 +719,7 @@ body {
      right: 50%;
     transform: translateX(50%);
     bottom: 1.5rem;
-    color: #2b2d54;
+    color: #ffffff;
   }
 }
 
@@ -708,11 +745,31 @@ body {
     gap: 0.6rem;
   }
 
+ 
+  .logot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-contacto {
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-contacto div {
+    justify-content: center;
+    width: 100%;
+  }
+
+
+
   .navbar-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+     margin-top: -18px;
   }
 
   .menu {
@@ -720,6 +777,7 @@ body {
     align-items: center;
     width: 100%;
     gap: 1rem;
+    
   }
 
   .menu li {
@@ -731,4 +789,19 @@ body {
     margin-top: 1rem;
     align-self: center;
   }
+
+  .menu {
+    gap: 0.5rem !important; /* Reduce el espacio vertical entre elementos */
+    margin-bottom: 0.5rem;  /* Ajusta separación respecto al botón */
+  }
+
+  .menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .btn-presupuesto {
+    margin-top: -1.5rem !important; /* Reduce espacio con el menú */
+  }
 }
+
